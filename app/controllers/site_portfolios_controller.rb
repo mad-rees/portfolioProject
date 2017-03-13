@@ -1,6 +1,6 @@
 class SitePortfoliosController < ApplicationController
 	def index
-		@portfolio_items = SitePortfolio.all
+		@portfolio_items = SitePortfolio.angular
 		end
 	def new
 		@portfolio_item = SitePortfolio.new
