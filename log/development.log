@@ -6985,3 +6985,20 @@ Processing by SitePortfoliosController#index as HTML
 Completed 200 OK in 42ms (Views: 34.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-03-13 23:59:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/application
+  [1m[36mSitePortfolio Load (5.6ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."subtitle" = $1[0m  [["subtitle", "AngularJS"]]
+  Rendered site_portfolios/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 272ms (Views: 237.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-03-14 00:00:02 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/application
+  [1m[36mSitePortfolio Load (0.4ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."subtitle" = $1[0m  [["subtitle", "Ruby on Rails"]]
+  Rendered site_portfolios/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 39ms (Views: 24.4ms | ActiveRecord: 5.1ms)
+
+
