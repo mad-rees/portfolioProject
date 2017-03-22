@@ -7285,3 +7285,89 @@ FOREIGN KEY ("site_portfolio_id")
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" ORDER BY "site_portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 9]]
+Started GET "/" for 127.0.0.1 at 2017-03-21 23:16:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 334ms (Views: 272.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-03-21 23:16:13 -0300
+Processing by SitePortfoliosController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SitePortfolio::Placeholder):
+  
+app/models/site_portfolio.rb:4:in `<class:SitePortfolio>'
+app/models/site_portfolio.rb:1:in `<top (required)>'
+app/controllers/site_portfolios_controller.rb:3:in `index'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.3ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-03-21 23:16:45 -0300
+Processing by SitePortfoliosController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant SitePortfolio::Placeholder):
+  
+app/models/site_portfolio.rb:4:in `<class:SitePortfolio>'
+app/models/site_portfolio.rb:1:in `<top (required)>'
+app/controllers/site_portfolios_controller.rb:3:in `index'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.1ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-03-21 23:16:51 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/application
+  [1m[36mSitePortfolio Load (0.7ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 55ms (Views: 36.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/site_portfolios/" for 127.0.0.1 at 2017-03-21 23:17:02 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/application
+  [1m[36mSitePortfolio Load (0.8ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/site_portfolios/new" for 127.0.0.1 at 2017-03-21 23:17:03 -0300
+Processing by SitePortfoliosController#new as HTML
+  Rendering site_portfolios/new.html.erb within layouts/application
+  Rendered site_portfolios/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site_portfolios/new" for 127.0.0.1 at 2017-03-21 23:17:04 -0300
+Processing by SitePortfoliosController#new as HTML
+  Rendering site_portfolios/new.html.erb within layouts/application
+  Rendered site_portfolios/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "site_portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Web App"], ["subtitle", "ashdjfhlahjfda"], ["body", "hjkfndsjalbeyuob"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", 2017-03-22 02:28:17 UTC], ["updated_at", 2017-03-22 02:28:17 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "site_portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["site_portfolio_id", 10], ["created_at", 2017-03-22 02:28:17 UTC], ["updated_at", 2017-03-22 02:28:17 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "site_portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "rails"], ["site_portfolio_id", 10], ["created_at", 2017-03-22 02:28:17 UTC], ["updated_at", 2017-03-22 02:28:17 UTC]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "site_portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["site_portfolio_id", 10], ["created_at", 2017-03-22 02:28:17 UTC], ["updated_at", 2017-03-22 02:28:17 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" ORDER BY "site_portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 10]]

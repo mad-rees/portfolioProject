@@ -1,7 +1,11 @@
 class SitePortfolio < ApplicationRecord
 has_many :technologies
 	validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image
-	
+	accepts_nested_attributes_for :technologies, 
+		reject_if: lambda { |attrs| attrs['name'].blank? }
+		
+
+
 	def self.angular
 		where(subtitle: "AngularJS")
 	end
@@ -14,4 +18,5 @@ has_many :technologies
 		self.main_image ||= "http://placehold.it/600x400"
 		self.thumb_image ||=  "http://placehold.it/350x200"
 	end
+		
 end

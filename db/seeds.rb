@@ -51,7 +51,7 @@ puts "1 portfolio item created"
 
 3.times do |technology|
 	SitePortfolio.last.technologies.create!(
-		name: "Technology #{technology}",
+		name: "Technology #{technology}"
 		)
 end
 puts "3 Technologies created"
