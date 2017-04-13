@@ -8,7 +8,7 @@ class SitePortfoliosController < ApplicationController
 		end
 		
 	def create
-	    @site_portfolio =  SitePortfolio.new(params.require(:site_portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+	    @site_portfolio =  SitePortfolio.new(site_portfolio_params)
 		    respond_to do |format|
 			    if @site_portfolio.save
 			        format.html { redirect_to site_portfolios_path, notice: 'Portfolio successfully created.' }
@@ -23,7 +23,7 @@ class SitePortfoliosController < ApplicationController
 	def update
 		@portfolio_item = SitePortfolio.find(params[:id])
 	    respond_to do |format|
-		    if @portfolio_item.update(params.require(:site_portfolio).permit(:title, :subtitle, :body))
+		    if @portfolio_item.update(site_portfolio_params)
 		        format.html { redirect_to site_portfolios_path, notice: 'Blog was successfully updated.' }
 			    else
 		        format.html { render :edit }
@@ -39,6 +39,16 @@ class SitePortfoliosController < ApplicationController
 			respond_to do |format|
 				format.html { redirect_to site_portfolios_url, notice: 'Portolio item was successfully destroyed.' }
     		end
+		end
+	private 
+	
+	def site_portfolio_params
+		params.require(:site_portfolio).permit(
+		:title, 
+		:subtitle, 
+		:image,
+		:body, 
+		technologies_attributes: [:name])
 		end
 	end
 
