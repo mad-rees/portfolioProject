@@ -1,4 +1,5 @@
 class SitePortfoliosController < ApplicationController
+	layout 'site_portfolio'
 	def index
 		@portfolio_items = SitePortfolio.all
 		end

@@ -9575,3 +9575,634 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 56ms (Views: 33.3ms | ActiveRecord: 8.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-14 22:11:09 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (125.2ms)
+Completed 200 OK in 188ms (Views: 117.6ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:11:12 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/application
+  [1m[36mSitePortfolio Load (1.7ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/application (26.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 35.8ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:11:24 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (7.6ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'blogs', 
+    8: 	    media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   10:   </head>
+  
+app/views/layouts/blog.html.erb:7:in `_app_views_layouts_blog_html_erb__905736338658195608_70252249326880'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.2ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:12:56 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (6.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'blogs', 
+    8: 	    media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   10:   </head>
+  
+app/views/layouts/blog.html.erb:7:in `_app_views_layouts_blog_html_erb__905736338658195608_70252225259440'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.1ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:12:58 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (6.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+    4:     <title><%= @page_title %></title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'blogs', 
+    8: 	    media: 'all', 'data-turbolinks-track': 'reload' %>
+    9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   10:   </head>
+  
+app/views/layouts/blog.html.erb:7:in `_app_views_layouts_blog_html_erb__905736338658195608_70252224983680'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:13:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (53.5ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 317ms (Views: 278.4ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/blogs/my-blog-post-1" for 127.0.0.1 at 2017-04-14 22:13:26 -0300
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-1"}
+  [1m[36mBlog Load (3.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (0.8ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 18.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:14:38 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (6.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:14:59 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (6.7ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:15:57 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (6.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 22:16:47 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 43ms (Views: 30.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 22:16:48 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 22:21:53 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 80ms (Views: 65.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:21:55 -0300
+Processing by SitePortfoliosController#index as HTML
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/portfolio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/christopherrees/Code/portfolio/app/views"
+  * "/Users/christopherrees/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views"
+):
+  
+actionview (5.0.1) lib/action_view/path_set.rb:46:in `find'
+actionview (5.0.1) lib/action_view/lookup_context.rb:122:in `find'
+actionview (5.0.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+actionview (5.0.1) lib/action_view/renderer/template_renderer.rb:89:in `resolve_layout'
+actionview (5.0.1) lib/action_view/renderer/template_renderer.rb:96:in `resolve_layout'
+actionview (5.0.1) lib/action_view/renderer/template_renderer.rb:76:in `find_layout'
+actionview (5.0.1) lib/action_view/renderer/template_renderer.rb:60:in `render_with_layout'
+actionview (5.0.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.1) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.1) lib/action_view/rendering.rb:103:in `_render_template'
+actionpack (5.0.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.1) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.1) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/christopherrees/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.1) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (93.2ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:22:32 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.7ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (19.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 42.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:23:07 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.4ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (5.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/site_portfolio.css" for 127.0.0.1 at 2017-04-14 22:23:07 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/site_portfolio.css"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (8.0ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.9ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.4ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:23:09 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (5.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/stylesheets/site_portfolio.css" for 127.0.0.1 at 2017-04-14 22:23:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/site_portfolio.css"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendered collection of /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (8.7ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.1ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:23:22 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (5.1ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stylesheets/site_portfolio.css" for 127.0.0.1 at 2017-04-14 22:23:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/site_portfolio.css"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (7.2ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.3ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:23:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.7ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (19.5ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 285ms (Views: 246.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/stylesheets/site_portfolio.css" for 127.0.0.1 at 2017-04-14 22:23:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/site_portfolio.css"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (16.1ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (148.0ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:23:42 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (1.0ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (6.8ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/stylesheets/site_portfolio.css" for 127.0.0.1 at 2017-04-14 22:23:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/site_portfolio.css"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (7.4ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.7ms)
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:24:24 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (1.1ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (6.8ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-04-14 22:24:38 -0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-04-14 22:24:38 -0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 22:24:40 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 88ms (Views: 50.5ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:24:41 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (7.2ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-14 22:24:41 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (5.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:24:46 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.4ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (7.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-14 22:24:46 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.9ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (5.3ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 2.2ms)
+
+
