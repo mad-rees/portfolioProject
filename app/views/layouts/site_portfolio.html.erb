@@ -20,11 +20,11 @@
        <%= link_to "Login", new_user_session_path %>
        <%= link_to "Register", new_user_registration_path %>
        <% end %>
+       <%= render "shared/nav", location: 'top' %>
        
 	   <%= yield %>
 	          
-       <%= render "shared/nav" %>
-       
+	          
 	   <% if session[:source] %>
 	   <p>Thanks for visiting me from <%= session[:source] %></p>
 	   <% end %>
