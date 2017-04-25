@@ -1,4 +1,5 @@
 class SitePortfoliosController < ApplicationController
+	before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
 	layout 'site_portfolio'
 	def index
 		@portfolio_items = SitePortfolio.all
@@ -19,10 +20,8 @@ class SitePortfoliosController < ApplicationController
 			end
 		end
     def edit
-	   	@portfolio_item = SitePortfolio.find(params[:id])
 	   	end
 	def update
-		@portfolio_item = SitePortfolio.find(params[:id])
 	    respond_to do |format|
 		    if @portfolio_item.update(site_portfolio_params)
 		        format.html { redirect_to site_portfolios_path, notice: 'Blog was successfully updated.' }
@@ -32,10 +31,8 @@ class SitePortfoliosController < ApplicationController
 		    end
 		end
 	def show
-		@portfolio_item = SitePortfolio.find(params[:id])
 		end
 	def destroy
-		@portfolio_item = SitePortfolio.find(params[:id])
 		@portfolio_item.destroy
 			respond_to do |format|
 				format.html { redirect_to site_portfolios_url, notice: 'Portolio item was successfully destroyed.' }
@@ -50,6 +47,9 @@ class SitePortfoliosController < ApplicationController
 		:image,
 		:body, 
 		technologies_attributes: [:name])
+		end
+	def set_portfolio_item
+		@portfolio_item = SitePortfolio.find(params[:id])
 		end
 	end
 

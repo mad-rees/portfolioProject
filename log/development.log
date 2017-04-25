@@ -11775,3 +11775,1029 @@ Processing by PagesController#contact as HTML
 Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-23 14:14:10 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (14.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (41.7ms)
+  Rendered shared/_nav.html.erb (2.3ms)
+Completed 200 OK in 148ms (Views: 115.6ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-23 14:14:16 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.3ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-23 14:14:16 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (14.3ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-24 23:41:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (8.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (3.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (39.1ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 277ms (Views: 232.9ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-24 23:41:22 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (3.1ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.6ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (24.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 42.1ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-24 23:41:22 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.8ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (2.9ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (6.1ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/site_portfolios/new" for 127.0.0.1 at 2017-04-24 23:41:25 -0300
+Processing by SitePortfoliosController#new as HTML
+  Rendering site_portfolios/new.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/_form.html.erb (22.6ms)
+  Rendered site_portfolios/new.html.erb within layouts/site_portfolio (24.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 50.8ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:41:32 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (10.9ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (1.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (5.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 23.2ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-24 23:41:41 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (1.5ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (4.4ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (13.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 36.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/site_portfolios/1/edit" for 127.0.0.1 at 2017-04-24 23:41:45 -0300
+Processing by SitePortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (0.4ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/edit.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (0.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/_form.html.erb (6.4ms)
+  Rendered site_portfolios/edit.html.erb within layouts/site_portfolio (9.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 35.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-24 23:46:01 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.3ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.6ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (18.7ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 29.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:46:04 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (7.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <%= image_tag @portfolio_item.main_image %>
+    2: 
+    3: <h1><%= @portfolio_item.title %></h1>
+    4: 
+  
+app/views/site_portfolios/show.html.erb:1:in `_app_views_site_portfolios_show_html_erb__2585072449330214556_70137284987580'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.9ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:48:57 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `pry' for #<Binding:0x007f9439a6f868>
+Did you mean?  try):
+    1: <% binding.pry %>
+    2: 
+    3: <%= image_tag @portfolio_item.main_image %>
+    4: 
+  
+app/views/site_portfolios/show.html.erb:1:in `_app_views_site_portfolios_show_html_erb__2585072449330214556_70137253162240'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.9ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:53:29 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (3.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `pry' for #<Binding:0x007f9439c83f00>
+Did you mean?  try):
+    1: <% binding.pry %>
+    2: 
+    3: <%= image_tag @portfolio_item.main_image %>
+    4: 
+  
+app/views/site_portfolios/show.html.erb:1:in `_app_views_site_portfolios_show_html_erb__2585072449330214556_70137300713800'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.4ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:54:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (52296.1ms)
+Completed 401 Unauthorized in 52316ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:55:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:55:31 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/" for 127.0.0.1 at 2017-04-24 23:55:37 -0300
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (26752.3ms)
+Completed 401 Unauthorized in 26789ms (ActiveRecord: 0.0ms)
+
+
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (13373.4ms)
+Completed 401 Unauthorized in 13377ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-24 23:56:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (33.4ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 303ms (Views: 263.3ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-24 23:56:12 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.6ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (20.8ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+Completed 200 OK in 69ms (Views: 44.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-24 23:56:12 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.5ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (6.1ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (10.4ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:56:15 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:57:15 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:58:44 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:58:58 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-24 23:59:10 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (62293.2ms)
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (76734.3ms)
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (166194.2ms)
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (50462.4ms)
+Completed 401 Unauthorized in 62350ms (ActiveRecord: 0.0ms)
+
+
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (226248.4ms)
+Completed 401 Unauthorized in 76792ms (ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 166251ms (ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 50467ms (ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 226260ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:00:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (10.2ms)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <%= image_tag @portfolio_item.main_image %>
+    2: 
+    3: <h1><%= @portfolio_item.title %></h1>
+    4: 
+  
+app/views/site_portfolios/show.html.erb:1:in `_app_views_site_portfolios_show_html_erb__1726649658298507212_70315837999740'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.1ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:00:46 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (478003.9ms)
+Completed 500 Internal Server Error in 478010ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <% binding.pry %>
+    2: 
+    3: <%= image_tag @portfolio_item.main_image %>
+    4: 
+    5: <h1><%= @portfolio_item.title %></h1>
+    6: 
+  
+app/views/site_portfolios/show.html.erb:3:in `_app_views_site_portfolios_show_html_erb__1726649658298507212_70315849576260'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.3ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:10:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 00:16:23 -0300
+Started GET "/" for 127.0.0.1 at 2017-04-25 00:16:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (9.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (9.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+Processing by SitePortfoliosController#index as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (6.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (1.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (51.7ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 369ms (Views: 305.3ms | ActiveRecord: 23.9ms)
+
+
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (6.8ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.4ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (25.2ms)
+  Rendered shared/_nav.html.erb (0.2ms)
+Completed 200 OK in 429ms (Views: 35.3ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 00:16:29 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.5ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (7.1ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:16:31 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:18:48 -0300
+Processing by SitePortfoliosController#show as HTML
+Completed 401 Unauthorized in 137625ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:18:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (31658.9ms)
+Completed 500 Internal Server Error in 31682ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:20:38 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (13416.5ms)
+Completed 500 Internal Server Error in 13484ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <% binding.pry %>
+    2: 
+    3: <%= image_tag @portfolio_item.main_image %>
+    4: 
+    5: <h1><%= @portfolio_item.title %></h1>
+    6: 
+  
+app/views/site_portfolios/show.html.erb:3:in `_app_views_site_portfolios_show_html_erb__1265288083546071665_70362077602800'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.7ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:24:32 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (380.8ms)
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <% binding.pry %>
+    2: 
+    3: <%= image_tag @portfolio_item.main_image %>
+    4: 
+    5: <h1><%= @portfolio_item.title %></h1>
+    6: 
+  
+app/views/site_portfolios/show.html.erb:3:in `_app_views_site_portfolios_show_html_erb__1265288083546071665_70362080722680'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.3ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:24:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (64219.1ms)
+Completed 500 Internal Server Error in 64240ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <% binding.pry %>
+    2: 
+    3: <%= image_tag @portfolio_item.main_image %>
+    4: 
+    5: <h1><%= @portfolio_item.title %></h1>
+    6: 
+  
+app/views/site_portfolios/show.html.erb:3:in `_app_views_site_portfolios_show_html_erb___1157508743024872527_70141239773960'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.6ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:26:25 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (3.8ms)
+Completed 500 Internal Server Error in 54597ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `main_image' for nil:NilClass):
+    1: <%= image_tag @portfolio_item.main_image %>
+    2: 
+    3: <h1><%= @portfolio_item.title %></h1>
+    4: 
+  
+app/views/site_portfolios/show.html.erb:1:in `_app_views_site_portfolios_show_html_erb___1157508743024872527_70141266203040'
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christopherrees/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.2ms)
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:27:23 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (5.0ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:28:03 -0300
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (2.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (29.8ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 39976ms (Views: 223.7ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:28:03 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (0.2ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (2.5ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (0.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (13.7ms)
+  [1m[36mTechnology Load (9.1ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (24.7ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+Completed 200 OK in 103ms (Views: 80.4ms | ActiveRecord: 7.4ms)
+
+
+  Rendered shared/_nav.html.erb (0.3ms)
+Completed 200 OK in 131ms (Views: 94.3ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:30:12 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (0.2ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 20913ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:30:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (0.4ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (31.7ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 72103ms (Views: 228.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 00:32:05 -0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (0.2ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (0.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (11.5ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 100ms (Views: 78.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-25 01:07:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (31.8ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 8337ms (Views: 8304.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-25 01:07:17 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:07:22 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (18.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (22.8ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:07:22 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (8.3ms)
+  Rendered blogs/index.html.erb within layouts/blog (10.8ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-04-25 01:07:31 -0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (4.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-04-25 01:07:31 -0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 01:07:33 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (1.2ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (4.2ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (25.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 58.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 01:07:34 -0300
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 01:07:34 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (2.7ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (5.0ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (12.9ms)
+  [1m[36mSitePortfolio Load (2.3ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mTechnology Load (2.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (79.7ms)
+  Rendered shared/_nav.html.erb (0.3ms)
+Completed 200 OK in 135ms (Views: 95.1ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-04-25 01:07:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (25.1ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 81ms (Views: 60.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-04-25 01:07:36 -0300
+Started GET "/register" for 127.0.0.1 at 2017-04-25 01:07:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+Started GET "/login" for 127.0.0.1 at 2017-04-25 01:07:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_nav.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.1ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-04-25 01:10:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 168ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-04-25 01:10:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+Started GET "/login" for 127.0.0.1 at 2017-04-25 01:10:39 -0300
+Started GET "/register" for 127.0.0.1 at 2017-04-25 01:10:39 -0300
+  Rendering devise/registrations/new.html.erb within layouts/application
+Processing by Devise::SessionsController#new as HTML
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (32.7ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (15.0ms)
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.2ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 179ms (Views: 178.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 160ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 179ms (Views: 178.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 01:10:42 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.5ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.9ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (7.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 53.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 01:10:42 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.4ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (3.6ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (6.8ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:10:43 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (12.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (28.7ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:10:43 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (9.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.3ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-25 01:10:45 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-25 01:10:45 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 01:10:47 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (0.6ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (6.1ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (11.7ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 86ms (Views: 79.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site_portfolios" for 127.0.0.1 at 2017-04-25 01:10:47 -0300
+Processing by SitePortfoliosController#index as HTML
+  Rendering site_portfolios/index.html.erb within layouts/site_portfolio
+  [1m[36mSitePortfolio Load (1.2ms)[0m  [1m[34mSELECT "site_portfolios".* FROM "site_portfolios"[0m
+  Rendered collection of site_portfolios/_portfolio_item.html.erb [15 times] (6.1ms)
+  Rendered site_portfolios/index.html.erb within layouts/site_portfolio (12.1ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 78ms (Views: 74.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2017-04-25 01:10:51 -0300
+Processing by SitePortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSitePortfolio Load (2.5ms)[0m  [1m[34mSELECT  "site_portfolios".* FROM "site_portfolios" WHERE "site_portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering site_portfolios/show.html.erb within layouts/site_portfolio
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."site_portfolio_id" = $1[0m  [["site_portfolio_id", 1]]
+  Rendered site_portfolios/show.html.erb within layouts/site_portfolio (2.8ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 68ms (Views: 58.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/site_portfolios/new" for 127.0.0.1 at 2017-04-25 01:10:58 -0300
+Processing by SitePortfoliosController#new as HTML
+  Rendering site_portfolios/new.html.erb within layouts/site_portfolio
+  Rendered site_portfolios/_form.html.erb (6.7ms)
+  Rendered site_portfolios/new.html.erb within layouts/site_portfolio (9.0ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 49.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-25 01:14:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_source.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetPageMetadataConcern> at /Users/christopherrees/Code/portfolio/app/controllers/concerns/set_page_metadata_concern.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (33.4ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 476ms (Views: 441.7ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-25 01:14:52 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (4.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-04-25 01:14:57 -0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-04-25 01:15:00 -0300
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (3.0ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:15:02 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (26.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (31.6ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 139ms (Views: 135.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:15:02 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.3ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blogs/my-blog-post-1/toggle_status" for 127.0.0.1 at 2017-04-25 01:15:06 -0300
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"my-blog-post-1"}
+  [1m[36mBlog Load (8.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", 2017-04-25 04:15:06 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 23ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:15:06 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (8.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (16.3ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 62.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/blogs/my-blog-post-2/toggle_status" for 127.0.0.1 at 2017-04-25 01:15:08 -0300
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"my-blog-post-2"}
+  [1m[36mBlog Load (3.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", 2017-04-25 04:15:08 UTC], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 16ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:15:08 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (52.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 98ms (Views: 95.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs/my-blog-post-3/toggle_status" for 127.0.0.1 at 2017-04-25 01:15:10 -0300
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"my-blog-post-3"}
+  [1m[36mBlog Load (5.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "my-blog-post-3"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", 2017-04-25 04:15:10 UTC], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/blogs
+Completed 302 Found in 14ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-04-25 01:15:10 -0300
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.3ms)
+  Rendered blogs/index.html.erb within layouts/blog (45.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 118ms (Views: 115.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/my-blog-post-4/edit" for 127.0.0.1 at 2017-04-25 01:15:13 -0300
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-post-4"}
+  [1m[36mBlog Load (4.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "my-blog-post-4"], ["LIMIT", 1]]
+  Rendering blogs/edit.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (11.4ms)
+  Rendered blogs/edit.html.erb within layouts/blog (14.2ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 84ms (Views: 72.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-25 01:24:10 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (5.0ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-25 01:24:10 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (5.0ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 1.0ms)
+
+
